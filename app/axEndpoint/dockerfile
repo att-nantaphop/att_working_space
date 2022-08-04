@@ -1,0 +1,14 @@
+FROM node:16-alpine
+RUN ["mkdir", "/install"]
+
+ADD ["./package.json", "/install"]
+WORKDIR /install
+RUN npm install --verbose
+ENV NODE_PATH=/install/node_modules
+
+ARG APP_DIR=/app
+WORKDIR ${APP_DIR}
+
+COPY package.json ${APP_DIR}/package.json
+RUN cat ${APP_DIR}/package.json
+

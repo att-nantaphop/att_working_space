@@ -1,0 +1,12 @@
+services:
+ axEndpoint:
+    image: axdocker
+    ports:
+      - "3000:3000"
+    environment:
+      APP_NAME: "axEndpoint"
+    volumes:
+      - $PWD:/app
+    working_dir: /app
+    container_name: axEndpoint
+    command: node lib/index.js

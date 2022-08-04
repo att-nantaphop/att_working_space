@@ -1,0 +1,15 @@
+{
+    "extends": "@kha-devspace/tsconfig/common.json",
+    "compilerOptions": {
+      "target": "es2017",
+      "lib": ["es2017"],
+      "baseUrl": ".",
+      "rootDir": "src",
+      "paths": {
+        "@/utils/*": ["./src/utils/*"]
+      }
+    },
+    "exclude": ["node_modules", "lib/**/*"],
+    "include": ["**/*.ts"]
+  }
+  

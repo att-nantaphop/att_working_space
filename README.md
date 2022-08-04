@@ -13,6 +13,6 @@ task build
 
 # running without task
 pnpm install --frozen-lockfile
-pnpm --filter @app/* build
-pnpm --filter @services/* build
+pnpm --filter '@app/*' build
+pnpm --filter '@services/*' build
 ```
